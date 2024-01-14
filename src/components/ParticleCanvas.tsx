@@ -1,15 +1,17 @@
 import { useCallback } from 'react';
 import { loadSlim } from 'tsparticles-slim';
 import Particles from 'react-particles';
+import { Engine } from 'tsparticles-engine';
 
 export default function ParticleCanvas() {
-  const particlesInit = useCallback(async engine => {
+  const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
 
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async container => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const particlesLoaded = useCallback(async (container: any) => {
     await console.log(container);
   }, []);
 
