@@ -1,21 +1,16 @@
-import About from './components/About';
-import Home from './components/Home';
-import Nav from './components/Nav';
-import ParticleCanvas from './components/ParticleCanvas';
-import Portfolio from './components/Portfolio';
-import Resume from './components/Resume';
+import { useState } from 'react';
+import Intro from './components/Intro';
 
 export default function App() {
+  const [isIntroFinished, setisIntroFinished] = useState(false);
+
   return (
     <>
-      {/* FRAMER MOTION TO SCROLL BEHAVIOR */}
-      <ParticleCanvas />
-
-      <Nav />
-      <Home />
-      <About />
-      <Portfolio />
-      <Resume />
+      {isIntroFinished ? (
+        <h1>finished</h1>
+      ) : (
+        <Intro setIsIntroFinished={setisIntroFinished} />
+      )}
     </>
   );
 }
