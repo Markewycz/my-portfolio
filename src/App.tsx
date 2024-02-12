@@ -1,16 +1,19 @@
 import { useState } from 'react';
 import Intro from './components/Intro';
+import Hero from './components/Hero';
 
 export default function App() {
-  const [isIntroFinished, setisIntroFinished] = useState(false);
+  const [isIntroFinished, setIsIntroFinished] = useState(false);
 
   return (
     <>
       {isIntroFinished ? (
-        <h1>finished</h1>
+        <Hero />
       ) : (
-        <Intro setIsIntroFinished={setisIntroFinished} />
+        <Intro setIsIntroFinished={setIsIntroFinished} />
       )}
+      {/* <Intro setIsIntroFinished={setIsIntroFinished} /> */}
+      {/* <Hero /> */}
     </>
   );
 }

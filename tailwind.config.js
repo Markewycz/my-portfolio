@@ -16,7 +16,7 @@ export default {
       bg: '#E6E6E1',
 
       'text-dark': '#393632',
-      'text-lighter': '#6B645C',
+      'text-lighter': '#958B82',
       'text-intro': '#C9C9B3',
       'text-intro-light': '#DEDED7',
     },
