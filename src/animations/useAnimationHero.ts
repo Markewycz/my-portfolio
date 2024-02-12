@@ -48,7 +48,7 @@ export default function useAnimationHero() {
     animate(
       '#scroll-down',
       { y: 0 },
-      { duration: 1, stiffness: 50, type: 'spring' },
+      { duration: 1, stiffness: 100, type: 'spring' },
     );
   };
 

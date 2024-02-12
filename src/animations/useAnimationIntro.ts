@@ -22,7 +22,7 @@ export default function useAnimationIntro() {
     await animate(
       `#intro-${target}-container`,
       { y: 5 },
-      { duration: 0.7, type: 'spring', delay: 1.1 },
+      { duration: 0.7, type: 'spring', delay: 0.6 },
     );
     await animate(
       `#intro-${target}-container`,
@@ -41,7 +41,7 @@ export default function useAnimationIntro() {
     animate(
       '#bg',
       { y: -windowHeight },
-      { duration: 1.6, ease: easeOutBgCustom, delay: 3 },
+      { duration: 1.6, ease: easeOutBgCustom, delay: 2.5 },
     );
   };
 
@@ -56,7 +56,7 @@ export default function useAnimationIntro() {
     ]);
     setInterval(() => {
       setState(true);
-    }, 700);
+    }, 600);
   };
 
   return { playIntro, scope };
